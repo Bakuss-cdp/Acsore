@@ -1,2 +1,2 @@
 # Acsore
-Siteweb de Acsore:  Actons de Solidarité pour réfugiés
+Siteweb de Acsore:  Actions de Solidarité pour réfugiés
