@@ -143,15 +143,11 @@ get_header(); ?>
 						// Supprimer dernier indice du tableau avec array_slice(); 							   
 						$new_tab_post_id = array_slice($le_tab_post_id, 0, 3);	
 					  
-																	   
-						// Afficher chaque article avec get_post();								   
+																	  							   
 						foreach($new_tab_post_id as $article_id){ 
 																   
 							$info_article = get_post($article_id);
 							
-							// $excerpt = get_the_excerpt($info_article);
-							
-							//    echo $excerpt;
 								
 								 // Formater la date en j/m/a
 								$date_publication = $info_article->post_date;
@@ -174,16 +170,6 @@ get_header(); ?>
 																	 
 								  
 								 <li> <?php echo $info_article->post_content; ?> </li> 
-								
-								<!-- <li> <?php  // echo $info_article->post_excerpt; ?> </li> -->
-								 
-								<!--	 	<?php  // echo $excerpt; ?>  -->
-						
-						         <!--  <li> <?php  // echo the_excerpt(); ?> </li> -->
-										
-								<!-- <li> <?php // echo the_excerpt($article_id); ?> </li> -->
-
-								<!-- <li> <?php // echo $info_article->post_excerpt; ?> </li> --> 
 							</ul>
 		            </div>
 					  
@@ -197,8 +183,6 @@ get_header(); ?>
 							<a href="<?php echo get_the_permalink($article_id);?>"><strong> <?php echo $info_article->post_title; ?> </strong></a></li>
 
 								  <li> <?php  echo $info_article->post_content; ?> </li>  
-								 <!-- <li> <?php  // echo $info_article->post_excerpt; ?> </li> -->
-								 <!-- <li> <?php // echo the_excerpt($article_id); ?> </li> -->
 						</ul>
                       </div>
 	        <?php else: ?>
@@ -320,33 +304,7 @@ get_header(); ?>
 			 
 			 
 		<?php
-			// --------------------------------------- Bloc à exlure --------------------------------------------
-			// Start the loop.
-			// while ( have_posts() ) : the_post();
-
-				/*
-				 * Include the Post-Format-specific template for the content.
-				 * If you want to override this in a child theme, then include a file
-				 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-				 */
-			//	get_template_part( 'template-parts/content', get_post_format() );
-
-			// End the loop.
-			// endwhile;
-
-			// Previous/next page navigation.
-			/*
-			the_posts_pagination( array(
-				'prev_text'          => __( 'Previous page', 'twentysixteen' ),
-				'next_text'          => __( 'Next page', 'twentysixteen' ),
-				'before_page_number' => '<span class="meta-nav screen-reader-text">' . __( 'Page', 'twentysixteen' ) . ' </span>',
-			) );
-
-			// If no content, include the "No posts found" template.
-			else :
-				get_template_part( 'template-parts/content', 'none' );
-            */
-			// ---------------------------------------Fin de Bloc à exlure --------------------------------------------
+			
 			endif;
 			
 		 ?>

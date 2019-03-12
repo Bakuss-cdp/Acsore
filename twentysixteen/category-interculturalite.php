@@ -6,19 +6,7 @@ get_header(); ?>
 
 <section id="primary" class="site-content">
 
-		<script type ="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-		<script>
-		$(document).ready(function(){
-		  $(".contenu_infos").hide();
-			$("h2").mouseenter(function(){
-				$(this).css("cursor", "pointer")
-			});
-			  $("h2").click(function(){
-				$(this).next().slideToggle("slow");
-		  });
-		});
-		</script>
-
+<script src="js/acsore_manager.js"></script>
     <div id="content" role="main" class="cat_interculturalite ">
 			<?php
 			if ( have_posts() ) : ?>

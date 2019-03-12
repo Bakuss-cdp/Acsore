@@ -43,13 +43,13 @@ if(isset($_POST['valider'])){
 					   
  //	Pour les tests: des emails provisoires sont utilisés	
  
-  $liste_emails = array("bakuss2000@gmail.com",
-                        "bak@justice.com",
-						"kadiedebak@gmail.com",
-						"bakuss.cdp@gmail.com.com",
+  $liste_emails = array("communication@acsore.org",
+                        "secretariat@acsore.org",
+						"contact@acsore.org",
+						"secretariat@acsore.org",
 						"secretariat.acsore@gmail.com",
-						"bakuss.cdp@gmail.com.com",
-						"bak@justice.com");  	
+						"communication@acsore.org",
+						"secretariat.acsore@gmail.com");  	
 		
 		
 		
@@ -58,25 +58,7 @@ if(isset($_POST['valider'])){
             if($le_pole === $pole_concerne)   {
 				
 				    $email_concerne = $liste_emails[$key];
-	  				 
-					// ---------------------- Recapitulatif de saisie -----------------
-	                       /*
-						echo'<div id = "formulaire_contact" style="width:80%; border:1px dashed green; margin:auto; margin-bottom: 20px; margin-top: 15px; padding:10px;">';
-						echo "<b>Vous avez ecris:</b>" . " " . "</br></br>";
-						echo "<b>Votre Nom:</b>" . " " . $nom_expediteur. "</br></br>";
-						echo "<b>Votre Email:</b>" . " " . $email_expediteur. "</br></br>";
-						echo "<b>Votre téléphone:</b>" . " " . $phone_expediteur . "</br></br>";
-						echo "<b>Votre message est adressé au pôle:</b>" . " " . $pole_concerne . "</br></br>";
-						echo "<b>L'objet de message est :</b>" . " " . $objet_message . "</br></br>";
-						echo "<b>Vous avez joint le fichier:</b>" . " " . $fichier_joint. "</br></br>";
-						echo "<b>Votre message est:</b>" . " " . "<br/>" .$message_redige. "</br></br>";
-						echo '<button name="envoyermail">Envoie de Mail </button>';
-						echo '</div>';					                          
-	                   */
-
-					   
-		             // Envoie du mail à l'email concerné
-                        // if(isset($_POST['envoyermail'])){					 
+	  				 				 
 					  $mgs_envoye =	mail($email_concerne, $objet_message, $message_complet, $provient_de);
 					    
 						 if($mgs_envoye =!false){

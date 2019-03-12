@@ -650,7 +650,6 @@ function twentysixteen_widget_tag_cloud_args( $args ) {
 }
 add_filter( 'widget_tag_cloud_args', 'twentysixteen_widget_tag_cloud_args' );
 
-/* ----------- Login Redirect -------------- */
 add_filter("login_redirect", "roles_login_redirect", 10, 3);
 
 function roles_login_redirect($redirect_to, $request, $user)
